@@ -10,8 +10,8 @@ export default function App() {
       </View>
       <View>
         <View>
-          <Text>Coming soon</Text>
-          <Text style={styles.header}>Bringing Muslims Together</Text>
+          <Text style={styles.message}>Coming soon</Text>
+          <Text style={styles.header} numberOfLines={2}>Bringing Muslims Together</Text>
           <View>
             <Image source={require("./assets/images/apple-store.png")} />
             <Image source={require("./assets/images/google-play.png")} />
@@ -19,8 +19,8 @@ export default function App() {
           <Image source={require("./assets/images/landing-image-1.png")} />
         </View>
         <View>
-          <Text>Coming soon</Text>
-          <Text style={styles.header}>Get Notified When We Launch</Text>
+          <Text style={styles.message}>Coming soon</Text>
+          <Text style={styles.header} numberOfLines={2}>Get Notified When We Launch</Text>
           <View></View>
           <Image source={require("./assets/images/landing-image-2.png")} />
         </View>
@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#FAFAFA',
     alignItems: 'center',
     justifyContent: 'center',
-    fontWeight: 'bold'
   },
   header: {
     flex: 1,
@@ -53,10 +52,13 @@ const styles = StyleSheet.create({
     paddingInline: 1,
   },
   footer: {
-    
+
   },
   header: {
     fontSize: 20,
+  },
+  message: {
+    fontWeight: 'bold'
   },
   socials: {
     flex: 1,
@@ -66,6 +68,10 @@ const styles = StyleSheet.create({
   socialLink: {
     flex: 1,
     borderRadius: 999,
+    height: 30,
+    width: 30,
+    borderWidth: 1,
+    borderColor: 'black',
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "transparent",
